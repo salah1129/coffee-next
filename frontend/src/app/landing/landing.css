@@ -1,0 +1,305 @@
+.background{
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 80px;
+  color: white;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.background .titles{
+  position: absolute;
+  width: 45%;
+  left: 60px;
+  padding: 30px;
+  font-size: 26px;
+}
+.background .titles h1{
+  font-size: 46px;
+  font-weight: 800;
+  font-style: italic;
+}
+.background .titles h2{
+  font-size: 50px;
+  font-weight: 800;
+  margin-bottom: 16px;
+  font-style: italic;
+}
+.background .titles button{
+  background-color: white;
+  color: #2D3436;
+  width: 170px;
+  height: 50px;
+  margin-top: 16px;
+}
+.background .titles button:hover{
+  opacity: 0.9;
+}
+.collectionTitle{
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+  margin: 30px 0;
+}
+.collection{
+  width: 100%;
+  min-height: 80vh;
+}
+.collection {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+}
+.collection div{
+  height: 100%;
+  width: auto;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.collection div h3{
+  font-size: 36px;
+  font-weight: 700;
+  color: white;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+.guatemala{
+  height: 90vh;
+  width: 100%;
+  display: flex;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+}
+.guatemala .image{
+  height: 100%;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.image img{
+  height: 100%;
+}
+.guatemala .desc{
+  height: 100%;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 20px;
+  padding: 36px;
+}
+.guatemala .desc h1{
+  font-weight: bold;
+  font-size: 22px;
+  text-align: start;
+}
+.guatemala .desc p{
+  margin: 26px 0;
+  font-weight: 500;
+}
+.guatemala button{
+  background-color: #2D3436;
+  color: gold;
+  width: 160px;
+  height: 40px;
+  font-weight: 300;
+  font-weight: 300;
+}
+.guatemala button:hover{
+  opacity: 0.9;
+}
+.coldBrew{
+  height: 80vh;
+  width: 100%;
+  display: flex;
+}
+.coldBrew .description{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 50px;
+}
+.coldBrew .description h2{
+  font-size: 30px;
+  font-weight: 800;
+}
+.coldBrew .description p{
+  font-weight: 600;
+  margin: 30px 0;
+}
+.coldBrew .description button{
+  background-color: #2D3436;
+  width: 160px;
+  height: 40px;
+  color: white;
+  font-weight: 300;
+}
+.coldBrew .description button:hover{
+  opacity: 0.9;
+}
+.bear{
+  height: 80vh;
+  width: 100%;
+  display: flex;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: rgb(72, 72, 159)
+}
+.bear .desc{
+  height: 100%;
+  width: 60%;
+  padding: 100px;
+  font-size: 40px;
+  font-weight: 800;
+}
+.bear button{
+  font-weight: 300;
+  font-size: 16px;
+  background-color: rgb(72, 72, 159);
+  color: white;
+  padding: 10px;
+  width: 160px;
+  margin-top: 36px;
+}
+.bear button:hover{
+  opacity: 0.9;
+}
+
+
+.featuredProducts {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding: 30px;
+}
+
+.featuredProducts h1 {
+  font-size: 46px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.featuredProducts .products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.featuredProducts .products div {
+  position: relative;
+}
+
+.featuredProducts .products div img{
+  background-color: rgb(185, 184, 184);
+}
+.featuredProducts .products div button {
+  background-color: #2D3436;
+  color: gold;
+  height: 40px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  font-weight: 300;
+}
+
+.featuredProducts .products div button:hover {
+  opacity: 0.9;
+}
+
+[data-aos] {
+  opacity: 0;
+  transform: translateX(20px); /* Adjust as needed */
+  transition: opacity 0.8s, transform 0.8s;
+}
+
+[data-aos].aos-animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+/* Add this at the end of your existing CSS */
+
+@media only screen and (max-width: 1200px) {
+  .background .titles {
+    width: 60%;
+  }
+
+  .guatemala .desc,
+  .coldBrew .description {
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .guatemala .image,
+  .guatemala .desc,
+  .coldBrew .description {
+    height: auto;
+    padding: 26px;
+  }
+
+  .bear .desc {
+    padding: 50px;
+    font-size: 28px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .background {
+    padding: 0 20px;
+  }
+
+  .background .titles {
+    width: 100%;
+    text-align: center;
+  }
+
+  .guatemala,
+  .coldBrew,
+  .bear {
+    height: auto;
+    flex-direction: column;
+  }
+
+  .guatemala .image,
+  .guatemala .desc,
+  .coldBrew .description,
+  .bear .desc {
+    width: 100%;
+  }
+
+  .guatemala button,
+  .coldBrew .description button,
+  .bear button {
+    width: 100%;
+    margin-top: 20px;
+  }
+  .collection {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+  }
+  .background .titles{
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .collection {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); 
+  }
+  .collection div{
+    height: 400px;
+  }
+}

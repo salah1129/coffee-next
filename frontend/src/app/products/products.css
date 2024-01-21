@@ -1,0 +1,121 @@
+.products {
+    background-color: gainsboro;
+    padding-top: 100px;
+    font-size: 16px;
+    min-height: 100vh;
+}
+
+.productsNav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    font-size: 20px;
+}
+
+.productsNav ul {
+    display: flex;
+    gap: 16px;
+}
+
+.productsNav ul li {
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.filter {
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    width: 100%;
+    height: 400px; /* Set a fixed height for all cards */
+    transition: 0.3s;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    overflow: hidden; /* Hide overflow content if necessary */
+}
+
+.card img {
+    width: 100%;
+    height: 80%;
+    object-fit: cover; /* Maintain aspect ratio for images */
+    background-color: rgb(180, 178, 178);
+}
+
+.productInfo {
+    padding: 8px;
+}
+
+.productInfo h3 {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.productInfo .showDetails {
+    background-color: #2d3436;
+    padding: 8px;
+    color: gold;
+    text-align: center;
+    transition: 0.3s;
+    font-weight: 300;
+}
+
+.productInfo .showDetails:hover {
+    opacity: 0.9;
+}
+
+.selectedCategory {
+    border-bottom: 2px solid #000;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .productsNav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .productsNav ul {
+        margin-top: 16px;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        gap: 16px;
+    }
+    .productsNav ul li{
+        background-color: gray;
+    }
+    .filter{
+        background-color: #2d3436;
+        color: white;
+        width: 100%;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .cards {
+        grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+    }
+
+    .card {
+        height: auto; /* Adjust height for smaller screens */
+    }
+
+    .card img {
+        height: auto;
+    }
+    
+}
