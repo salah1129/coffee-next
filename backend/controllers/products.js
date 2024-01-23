@@ -32,7 +32,7 @@ exports.getAllProducts = async (req, res) => {
             _id: product._id,
             productName: product.productName,
             productImage: product.productImage,
-            category: product.categoryID.categoryName, // Assuming 'categoryName' is the field in the Category model
+            category: product.categoryID.categoryName, 
             descriptions: product.descriptions,
             price: product.price,
             images: product.images,
